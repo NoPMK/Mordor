@@ -18,7 +18,15 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IMordorService, MordorService>();
 builder.Services.AddScoped<IOrkRepository, OrkRepository>();
 
+builder.Services.AddCors(option => option
+    .AddDefaultPolicy(p => p
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .WithOrigins("http://127.0.0.1:5500")));
+
 var app = builder.Build();
+
+app.UseCors();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

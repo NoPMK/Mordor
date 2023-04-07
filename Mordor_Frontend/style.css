@@ -1,0 +1,76 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    align-items: left;
+    border-radius: 5px;
+    background-color: goldenrod;
+    margin-top: auto;
+    padding: 10px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.card {
+    display: flex;
+
+}
+
+.ring {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transition: 0.5s;
+}
+
+.gollam {
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    bottom: -10px;
+    height: 1px;
+    transition: 0.5s;
+}
+
+.item:hover .gollam {
+    transform: translateX(-50%);
+    transform: translateY(-1%);
+    visibility: visible;
+    height: 500px;
+    transition: 0.5s;
+}
+
+.your {
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    bottom: -10px;
+    height: 1px;
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+.item:hover .your {
+    /* transform: translateX(-55%); */
+    left: 100px;
+    transform: translateY(-10%);
+    visibility: visible;
+    height: 500px;
+    transition: 0.5s;
+}
+
+.card h1 {
+    position: relative;
+    left: 33%;
+}
